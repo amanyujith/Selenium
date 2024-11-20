@@ -1,0 +1,49 @@
+.RichEditor-editor .public-DraftStyleDefault-pre pre {
+    white-space: normal;
+  }
+
+  pre {
+    display: block;
+    white-space: normal;
+    text-overflow: inherit;
+    word-wrap: break-word;
+  }
+
+  .public-DraftEditorPlaceholder-root{
+    margin-top: 8px;
+    background-color: #F9FAFA !important;
+  }
+
+  .public-DraftEditor-content > div {
+    position: relative;
+    top: 9px;
+    overflow-wrap: break-word;
+    word-break: break-word
+
+  }
+
+  .public-DraftEditor-content > div > ol {
+   margin-left: 10px;
+  }
+
+  .hide-placeholder .public-DraftEditorPlaceholder-inner {
+    display: none
+  }
+
+  #chatMsg ul{
+    list-style: disc !important;
+    list-style-position: inside !important;
+  }
+
+  #chatMsg ol{
+    list-style: decimal !important;
+    list-style-position: inside !important;
+  }
+
+  #list ol{
+    margin-left: 10px !important;
+  }
+
+  #richTextBoxEditor .public-DraftEditor-content > div {
+    top: 0;
+  }

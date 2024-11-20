@@ -1,0 +1,1 @@
+jq '.buildNumber = "'$(date +'%Y%m%d')'"' package.json > tmp.json && mv tmp.json package.json

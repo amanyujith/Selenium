@@ -1,0 +1,223 @@
+/* .participant {
+    transition: linear 0.4s;
+    overflow: hidden;
+} */
+
+.participantGroupOne {
+    /* width: calc(100vw);
+    height: calc((100vw) * 0.5625);
+    max-height: calc(((100vh - 54px)));
+    max-width: calc((100vh - 54px) * 1.777777778); */
+    width: calc(100vw - 2px);
+    height: calc(100vh - 54px);
+}
+
+.participantGroupOne video,
+.participantGroupOneWithPanel video {
+    object-fit: cover;
+}
+
+.slefTile.participantGroupOne .videoOverlay-name,
+.slefTile.participantGroupOneWithPanel .videoOverlay-name {
+    display: none;
+}
+
+
+.participantGroupOneWithPanel {
+    width: calc(100vw - 354px);
+    height: calc((100vw - 354px) * 0.5625);
+    max-height: calc(((100vh - 56px)));
+    max-width: calc((100vh - 56px) * 1.777777778);
+}
+
+.participantGroupTwo {
+    width: calc((100vw - 4px) / 2);
+    height: calc(((100vw - 4px) / 2) * 0.5625);
+    max-height: calc((100vh - 56px));
+    max-width: calc((100vh - 56px) * 1.777777778);
+}
+
+.participantGroupTwoWithPanel {
+    width: calc((100vw - 358px) / 2);
+    height: calc(((100vw - 358px) / 2) * 0.5625);
+    max-height: calc((100vh - 56px));
+    max-width: calc((100vh - 56px) * 1.777777778);
+}
+
+.participantGroupThreeFour {
+    width: calc((100vw - 2px) / 2);
+    height: calc(((100vw - 2px) / 2) * 0.5625);
+    max-width: calc(((100vh - 56px) / 2) * 1.7778);
+    max-height: calc(((100vh - 56px) / 2));
+}
+
+.participantGroupThreeFourWithPanel {
+    width: calc((100vw - 358px) / 2);
+    height: calc(((100vw - 358px) / 2) * 0.5625);
+    max-width: calc(((100vh - 56px) / 2) * 1.7778);
+    max-height: calc(((100vh - 56px) / 2));
+}
+
+.participantGroupFiveSix {
+    width: calc((100vw - 5px) / 3);
+    height: calc(((100vw - 5px) / 3) * 0.5625);
+    max-width: calc(((100vh - 56px) / 2) * 1.7778);
+    max-height: calc(((100vh - 56px) / 2));
+}
+
+.participantGroupFiveSixWithPanel {
+    width: calc((100vw - 359px) / 3);
+    height: calc(((100vw - 359px) / 3) * 0.5625);
+    max-width: calc(((100vh - 56px) / 2) * 1.7778);
+    max-height: calc(((100vh - 56px) / 2));
+}
+
+.participantGroupSevenEightNine {
+    width: calc((100vw - 3px) / 3);
+    height: calc(((100vw - 2px) / 3) * 0.5625);
+    max-width: calc(((100vh - 56px) / 3) * 1.7778);
+    max-height: calc(((100vh - 56px) / 3));
+}
+
+.participantGroupSevenEightNineWithPanel {
+    width: calc((100vw - 359px) / 3);
+    height: calc(((100vw - 359px) / 3) * 0.5625);
+    max-width: calc(((100vh - 56px) / 3) * 1.7778);
+    max-height: calc(((100vh - 56px) / 3));
+}
+
+.participantGroupTenToTwelve {
+    width: calc((100vw - 2px) / 4);
+    height: calc(((100vw - 2px) / 4) * 0.5625);
+    max-width: calc(((100vh - 56px) / 4) * 1.7778);
+    max-height: calc(((100vh - 56px) / 4));
+}
+
+.participantGroupTenToTwelveWithPanel {
+    width: calc((100vw - 360px) / 4);
+    height: calc(((100vw - 360px) / 4) * 0.5625);
+    max-width: calc(((100vh - 56px) / 4) * 1.7778);
+    max-height: calc(((100vh - 56px) / 4));
+}
+
+/* .participantGroup13to15 {
+    width: calc((100vw) / 5);
+    height: calc(((100vw) / 5) * 0.5625);
+    max-width: calc(((100vh - 54px) / 5) * 1.7778);
+    max-height: calc(((100vh - 54px) / 5));
+} */
+.participantGroup13to15 {
+    width: calc((100vw - 4px) / 4);
+    height: calc(((100vw - 2px) / 4) * 0.5625);
+    max-width: calc(((100vh - 56px) / 4) * 1.7778);
+    max-height: calc(((100vh - 56px) / 4));
+}
+
+/* .participantGroup13to15WithPanel {
+    width: calc((100vw - 352px) / 5);
+    height: calc(((100vw - 352px) / 5) * 0.5625);
+    max-width: calc(((100vh - 54px) / 5) * 1.7778);
+    max-height: calc(((100vh - 54px) / 5));
+} */
+.participantGroup13to15WithPanel {
+    width: calc((100vw - 360px) / 4);
+    height: calc(((100vw - 360px) / 4) * 0.5625);
+    max-width: calc(((100vh - 56px) / 4) * 1.7778);
+    max-height: calc(((100vh - 56px) / 4));
+}
+
+.participantGroup16 {
+    width: calc((100vw - 2px) / 4);
+    height: calc(((100vw - 2px) / 4) * 0.5625);
+    max-width: calc(((100vh - 58px) / 4) * 1.7778);
+    max-height: calc(((100vh - 58px) / 4));
+}
+
+.participantGroup16WithPanel {
+    width: calc((100vw - 360px) / 4);
+    height: calc(((100vw - 360px) / 4) * 0.5625);
+    max-width: calc(((100vh - 58px) / 4) * 1.7778);
+    max-height: calc(((100vh - 58px) / 4));
+}
+
+/* .participantGroup17to20 {
+    width: calc((100vw) / 5);
+    height: calc(((100vw) / 5) * 0.5625);
+    max-width: calc(((100vh - 54px) / 5) * 1.7778);
+    max-height: calc(((100vh - 54px) / 5));
+} */
+
+
+.participantGroup17to20 {
+    width: calc((100vw - 8px) / 6);
+    height: calc(((100vw - 8px) / 6) * 0.5625);
+    max-width: calc(((100vh - 56px) / 5) * 1.7778);
+    max-height: calc(((100vh - 56px) / 5));
+}
+
+
+/* .participantGroup17to20WithPanel {
+    width: calc((100vw - 352px) / 5);
+    height: calc(((100vw - 352px) / 5) * 0.5625);
+    max-width: calc(((100vh - 54px) / 5) * 1.7778);
+    max-height: calc(((100vh - 54px) / 5));
+} */
+
+.participantGroup17to20WithPanel {
+    width: calc((100vw - 361px) / 4);
+    height: calc(((100vw - 361px) / 4) * 0.5625);
+    max-width: calc(((100vh - 58px) / 5) * 1.7778);
+    max-height: calc(((100vh - 58px) / 5));
+}
+
+/* .participantGroup20to24 {
+    width: calc((100vw) / 6);
+    height: calc(((100vw) / 6) * 0.5625);
+    max-width: calc(((100vh - 54px) / 6) * 1.7778);
+    max-height: calc(((100vh - 54px) / 6));
+} */
+
+.participantGroup20to24 {
+    width: calc((100vw - 9px) / 6);
+    height: calc(((100vw - 9px) / 6) * 0.5625);
+    max-width: calc(((100vh - 56px) / 5) * 1.7778);
+    max-height: calc(((100vh - 56px) / 5));
+}
+
+/* .participantGroup20to24WithPanel {
+    width: calc((100vw) / 6);
+    height: calc(((100vw) / 6) * 0.5625);
+    max-width: calc(((100vh - 54px) / 6) * 1.7778);
+    max-height: calc(((100vh - 54px) / 6));
+} */
+
+.participantGroup20to24WithPanel {
+    width: calc((100vw - 360px) / 6);
+    height: calc(((100vw - 360px) / 6) * 0.5625);
+    max-width: calc(((100vh - 58px) / 5) * 1.7778);
+    max-height: calc(((100vh - 58px) / 5));
+}
+
+.avatarSize1to12 {
+    width: calc((100vw)/10);
+    height: calc((100vw)/10);
+    font-size: max(min(calc((100vw)/20), 3em), 1rem);
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.avatarSize13to15 {
+    width: calc((100vw - 140px)/10);
+    height: calc((100vw - 140px)/10);
+    font-size: max(min(calc((100vw)/20), 2em), 1rem);
+    max-width: 60px;
+    max-height: 60px;
+}
+
+.avatarSize17to24 {
+    width: calc((100vw - 140px)/10);
+    height: calc((100vw - 140px)/10);
+    font-size: max(min(calc((100vw)/20), 1.6em), 1rem);
+    max-width: 55px;
+    max-height: 55px;
+}

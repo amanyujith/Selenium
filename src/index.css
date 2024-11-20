@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+      font-family: Roboto , sans-serif;
+    }
+    ul {
+      list-style:disc ;
+      /* list-style-position: inside; */
+    }
+    ol {
+      list-style:decimal;
+      list-style-position: inside;
+    }
+  }
+
+.audioWave:first-child :first-child{
+  height: 26px !important;
+  overflow-x: hidden !important;
+}
+.audioWaveLive wave wave {
+  border-right: none !important;
+}

@@ -1,0 +1,251 @@
+it("Starting auido call",async function () {
+    try{
+  
+  await driver.executeScript("window.scrollTo(0,0)");
+
+  await driver.executeScript(`
+    const overlay = document.getElementById('webpack-dev-server-client-overlay');
+    if (overlay) {
+        overlay.parentNode.removeChild(overlay);
+    }
+`);
+
+  const startAudioCallButton = await driver.wait(
+    until.elementLocated(By.id("startAudioCall")),
+    10000 // Wait up to 10 seconds
+);
+
+await driver.wait(until.elementIsVisible(startAudioCallButton), 10000);
+await startAudioCallButton.click();
+
+  let options = new firefox.Options();
+  options.addArguments("-private");
+  options.setPreference('media.navigator.permission.disabled', true);  // Disable permission prompts for media devices
+options.setPreference('media.navigator.video.enabled', true);       // Enable video
+options.setPreference('media.navigator.audio.enabled', true);       // Enable audio
+options.setPreference('media.autoplay.default', 0);                // Allow autoplay of media
+options.setPreference('permissions.default.camera', 1);            // Allow camera access
+options.setPreference('permissions.default.microphone', 1);        // Allow microphone access
+options.setPreference('permissions.default.desktop-notification', 1); // Allow notifications
+options.setPreference('permissions.default.desktop', 1); 
+  let driverB = await new Builder()
+    .forBrowser("firefox")
+    .setFirefoxOptions(options)
+    .build();
+    
+  await driverB.manage().window().maximize();
+  await driverB.get("https://us3-test.ncsapp.com/app");
+  const newWindowHandle = await driverB.getWindowHandle();
+  await driver.sleep(50000);
+  await driverB.findElement(By.id("loginPassword")).sendKeys("password");
+  await driverB
+    .findElement(By.id("loginUserName"))
+    .sendKeys("dilshad");
+
+  await driverB.findElement(By.id("loginButton")).click();
+
+  // await driverB.sleep(10000);
+  await driverB.executeScript("window.scrollTo(0,0)");
+  const chatSectionB = await driverB.wait(
+    until.elementLocated(By.id("CHATSECTION")),5000
+  );
+  // await chatSectionB.click();
+  await driver.executeScript("arguments[0].scrollIntoView(true);", chatSectionB);
+  await chatSectionB.click();
+
+
+  await driverB
+    .findElement(By.id("6cebe168-d496-432c-a7b8-6b5a9df4c8ff"))
+    .click();
+  await driverB.executeScript("window.scrollTo(0,0)");
+  await driverB.sleep(5000);
+  await driverB.findElement(By.id("JoinExistingCall")).click();
+
+  // const Answer = await driver.wait(
+  //   until.elementLocated(By.xpath("//button/div[text()='Answer']")),
+  //   5000
+  // );
+
+  // await Answer.click();
+  await driverB.sleep(5000);
+  const originalWindow = await driver.getWindowHandle();
+  await driver.switchTo().window(originalWindow);
+  await driver.executeScript(`
+    const overlay = document.getElementById('webpack-dev-server-client-overlay');
+    if (overlay) {
+        overlay.parentNode.removeChild(overlay);
+    }
+`);
+  await driver.sleep(10000);
+
+  await driver.findElement(By.id("miniplayercontrols")).click();
+  await driver.findElement(By.id("videoButtonMini")).click();
+  await driver
+    .findElement(By.css(".gap-4 > div > .cursor-pointer"))
+    .click();
+  await driver.findElement(By.css(".mb-\\[3px\\] > svg")).click();
+  await driver.findElement(By.id("AddMembersearch")).click();
+
+  await driver.findElement(By.id("AddMembersearch")).sendKeys("sanil");
+  await driver.sleep(5000)
+  const checkBox = await driver.wait(
+    until.elementLocated(By.id("group_members")),
+    5000
+  );
+  const searchResult = await checkBox.getAttribute('value')
+  assert.strictEqual(searchResult,"bca44db7-7138-4455-b483-6266f04a07ba", "chat invite failed")
+  await driver.executeScript("arguments[0].click();", checkBox);
+  // await driver.findElement(By.id("group_members")).click()
+  await driver.findElement(By.id("PostInvite")).click();
+  await driver.findElement(By.id("callHangUp")).click(); 
+  
+  await driverB.switchTo().window(newWindowHandle);
+  await driverB.executeScript(`
+    const overlay = document.getElementById('webpack-dev-server-client-overlay');
+    if (overlay) {
+        overlay.parentNode.removeChild(overlay);
+    }
+`);
+  await driverB.sleep(1000);
+  await driverB.findElement(By.id("callHangUp")).click();
+  await driverB.quit();
+  // const originalWindow = await driver.getWindowHandle();
+  await driver.switchTo().window(originalWindow);
+}catch(error){
+  console.log("Error in starting a audio call",error);
+}
+})
+
+
+
+
+
+
+//new code
+// describe("Audio Call Tests", function () {
+//   let driverB;
+//   const firefoxOptions = new firefox.Options();
+  
+//   before(async function () {
+//     firefoxOptions.addArguments("-private");
+//     firefoxOptions.setPreference('media.navigator.permission.disabled', true);  
+//     firefoxOptions.setPreference('media.navigator.video.enabled', true);       
+//     firefoxOptions.setPreference('media.navigator.audio.enabled', true);       
+//     firefoxOptions.setPreference('media.autoplay.default', 0);                
+//     firefoxOptions.setPreference('permissions.default.camera', 1);            
+//     firefoxOptions.setPreference('permissions.default.microphone', 1);        
+//     firefoxOptions.setPreference('permissions.default.desktop-notification', 1);
+//     firefoxOptions.setPreference('permissions.default.desktop', 1); 
+
+//     driverB = await new Builder()
+//       .forBrowser("firefox")
+//       .setFirefoxOptions(firefoxOptions)
+//       .build();
+//     await driverB.manage().window().maximize();
+//   });
+
+//   after(async function () {
+//     await driverB.quit();
+//   });
+
+//   it("should start audio call from first user", async function () {
+//     await driver.executeScript("window.scrollTo(0,0)");
+//             await driver.executeScript(`
+//           const overlay = document.getElementById('webpack-dev-server-client-overlay');
+//           if (overlay) {
+//               overlay.parentNode.removeChild(overlay);
+//           }
+//       `);
+
+//     const startAudioCallButton = await driver.wait(
+//       until.elementLocated(By.id("startAudioCall")),
+//       10000
+//     );
+
+//     await driver.wait(until.elementIsVisible(startAudioCallButton), 10000);
+//     await startAudioCallButton.click();
+//   });
+
+//   it("should login as second user and join existing call", async function () {
+//     await driverB.get("https://us3-test.ncsapp.com/app");
+//     await driver.sleep(10000)
+//     // const newWindowHandle = await driverB.getWindowHandle();
+
+//     await driverB.findElement(By.id("loginUserName")).sendKeys("dilshad");
+//     await driverB.findElement(By.id("loginPassword")).sendKeys("password");
+//     await driverB.findElement(By.id("loginButton")).click();
+
+//     const chatSectionB = await driverB.wait(
+//       until.elementLocated(By.id("CHATSECTION")),
+//       10000
+//     );
+//     await chatSectionB.click();
+
+//     await driverB
+//       .findElement(By.id("6cebe168-d496-432c-a7b8-6b5a9df4c8ff"))
+//       .click();
+//     await driverB.executeScript("window.scrollTo(0,0)");
+//     await driverB.sleep(5000);
+
+//     await driverB.findElement(By.id("JoinExistingCall")).click();
+//   });
+
+//   it("should add a new member to the call", async function () {
+//     const originalWindow = await driver.getWindowHandle();
+//     await driver.switchTo().window(originalWindow);
+
+//             await driver.executeScript(`
+//           const overlay = document.getElementById('webpack-dev-server-client-overlay');
+//           if (overlay) {
+//               overlay.parentNode.removeChild(overlay);
+//           }
+//       `);
+//         await driver.sleep(10000);
+
+    
+//     await driver.findElement(By.id("miniplayercontrols")).click();
+//     await driver.findElement(By.id("videoButtonMini")).click();
+//     await driver
+//       .findElement(By.css(".gap-4 > div > .cursor-pointer"))
+//       .click();
+      
+//     await driver.findElement(By.css(".mb-\\[3px\\] > svg")).click();
+
+//     const addMemberSearch = await driver.findElement(By.id("AddMembersearch"));
+//     await addMemberSearch.click();
+//     await addMemberSearch.sendKeys("sanil");
+
+//     const checkBox = await driver.wait(
+//       until.elementLocated(By.id("group_members")),
+//       5000
+//     );
+//     const searchResult = await checkBox.getAttribute("value");
+//     assert.strictEqual(
+//       searchResult,
+//       "bca44db7-7138-4455-b483-6266f04a07ba",
+//       "Chat invite failed"
+//     );
+
+//     await driver.executeScript("arguments[0].click();", checkBox);
+//     await driver.findElement(By.id("PostInvite")).click();
+//   });
+
+//   it("should hang up the call from both users", async function () {
+    
+//     // Hang up from driver
+//     await driver.findElement(By.id("callHangUp")).click();
+//     const newWindowHandle = await driverB.getWindowHandle();
+//             await driverB.switchTo().window(newWindowHandle);
+//         await driverB.executeScript(`
+//           const overlay = document.getElementById('webpack-dev-server-client-overlay');
+//           if (overlay) {
+//               overlay.parentNode.removeChild(overlay);
+//           }
+//       `);
+
+//     // Switch to second user window (driverB) and hang up
+    
+//     await driverB.switchTo().window(newWindowHandle);
+//     await driverB.findElement(By.id("callHangUp")).click();
+//   });
+// });

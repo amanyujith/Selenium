@@ -1,0 +1,426 @@
+
+{
+  "header": {
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20230202.122134.6006.0.001.json",
+    "dumpEventTime": "2023-02-02T12:21:34Z",
+    "dumpEventTimeStamp": "1675320694672",
+    "processId": 6006,
+    "cwd": "/home/ashok/workspace/4.0/hoolva-web-4.0",
+    "commandLine": [
+      "/home/ashok/.nvm/versions/node/v12.0.0/bin/node",
+      "/home/ashok/workspace/4.0/hoolva-web-4.0/node_modules/@craco/craco/scripts/start.js"
+    ],
+    "nodejsVersion": "v12.0.0",
+    "glibcVersionRuntime": "2.31",
+    "glibcVersionCompiler": "2.17",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "linux",
+    "componentVersions": {
+      "node": "12.0.0",
+      "v8": "7.4.288.21-node.16",
+      "uv": "1.28.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.38.0",
+      "napi": "4",
+      "llhttp": "1.1.1",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1b",
+      "cldr": "34.0",
+      "icu": "63.1",
+      "tz": "2018e",
+      "unicode": "11.0"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v12.0.0/node-v12.0.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.0.0/node-v12.0.0.tar.gz"
+    },
+    "osName": "Linux",
+    "osRelease": "5.15.0-58-generic",
+    "osVersion": "#64~20.04.1-Ubuntu SMP Fri Jan 6 16:42:31 UTC 2023",
+    "osMachine": "x86_64",
+    "host": "netstratum"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x0000000000a94fed",
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::string const&, v8::Local<v8::String>) [/home/ashok/.nvm/versions/node/v12.0.0/bin/node]"
+    },
+    {
+      "pc": "0x000000000097b219",
+      "symbol": "node::OnFatalError(char const*, char const*) [/home/ashok/.nvm/versions/node/v12.0.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000af2d0e",
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/home/ashok/.nvm/versions/node/v12.0.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000af3089",
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/home/ashok/.nvm/versions/node/v12.0.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000efe235",
+      "symbol": " [/home/ashok/.nvm/versions/node/v12.0.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000f08b9b",
+      "symbol": "v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags) [/home/ashok/.nvm/versions/node/v12.0.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000f098b7",
+      "symbol": "v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/home/ashok/.nvm/versions/node/v12.0.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000f0c355",
+      "symbol": "v8::internal::Heap::AllocateRawWithRetryOrFail(int, v8::internal::AllocationType, v8::internal::AllocationAlignment) [/home/ashok/.nvm/versions/node/v12.0.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000000ed7380",
+      "symbol": "v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationSpace) [/home/ashok/.nvm/versions/node/v12.0.0/bin/node]"
+    },
+    {
+      "pc": "0x00000000011a917e",
+      "symbol": "v8::internal::Runtime_AllocateInNewSpace(int, unsigned long*, v8::internal::Isolate*) [/home/ashok/.nvm/versions/node/v12.0.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000001a5c1a2",
+      "symbol": " [/home/ashok/.nvm/versions/node/v12.0.0/bin/node]"
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2176438272,
+    "totalCommittedMemory": 2169297408,
+    "usedMemory": 2096283032,
+    "availableMemory": 53285712,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 524288,
+        "committedMemory": 32024,
+        "capacity": 523976,
+        "used": 31712,
+        "available": 492264
+      },
+      "new_space": {
+        "memorySize": 33554432,
+        "committedMemory": 28833936,
+        "capacity": 16767232,
+        "used": 3094256,
+        "available": 13672976
+      },
+      "old_space": {
+        "memorySize": 1970921472,
+        "committedMemory": 1969737496,
+        "capacity": 1946579304,
+        "used": 1945603088,
+        "available": 976216
+      },
+      "code_space": {
+        "memorySize": 2785280,
+        "committedMemory": 2369504,
+        "capacity": 2290560,
+        "used": 2290560,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 27791360,
+        "committedMemory": 27463008,
+        "capacity": 4577520,
+        "used": 4577520,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 140238848,
+        "committedMemory": 140238848,
+        "capacity": 140135336,
+        "used": 140135336,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 622592,
+        "committedMemory": 622592,
+        "capacity": 550560,
+        "used": 550560,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 16767232,
+        "used": 0,
+        "available": 16767232
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 104.589,
+    "kernelCpuSeconds": 5.0734,
+    "cpuConsumptionPercent": 189.073,
+    "maxRss": 2284007424,
+    "pageFaults": {
+      "IORequired": 119,
+      "IONotRequired": 917431
+    },
+    "fsActivity": {
+      "reads": 248064,
+      "writes": 24128
+    }
+  },
+  "uvthreadResourceUsage": {
+    "userCpuSeconds": 48.9788,
+    "kernelCpuSeconds": 1.97069,
+    "cpuConsumptionPercent": 87.844,
+    "fsActivity": {
+      "reads": 179600,
+      "writes": 0
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "GJS_DEBUG_TOPICS": "JS ERROR;JS LOG",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "npm_package_scripts_start_production": "env-cmd -f .env.production craco start",
+    "npm_package_dependencies__tldraw_core": "^1.20.0",
+    "npm_package_dependencies__craco_craco": "^6.4.3",
+    "npm_package_dependencies__babel_runtime": "^7.20.7",
+    "npm_package_jestSonar_reportPath": "reports",
+    "no_proxy": "localhost,127.0.0.0/8,::1",
+    "LANGUAGE": "en_IN:en",
+    "USER": "ashok",
+    "npm_package_dependencies__types_jest": "^27.0.1",
+    "npm_config_version_commit_hooks": "true",
+    "npm_config_user_agent": "yarn/1.22.10 npm/? node/v12.0.0 linux x64",
+    "npm_config_bin_links": "true",
+    "SSH_AGENT_PID": "1323",
+    "XDG_SESSION_TYPE": "x11",
+    "npm_node_execpath": "/home/ashok/.nvm/versions/node/v12.0.0/bin/node",
+    "npm_config_init_version": "1.0.0",
+    "SHLVL": "1",
+    "npm_package_dependencies_dotenv_expand": "^6.0.1",
+    "HOME": "/home/ashok",
+    "OLDPWD": "/home/ashok",
+    "npm_package_browserslist_production_0": ">0.2%",
+    "npm_package_dependencies__liveblocks_client": "^0.19.5",
+    "DESKTOP_SESSION": "ubuntu",
+    "NO_PROXY": "localhost,127.0.0.0/8,::1",
+    "NVM_BIN": "/home/ashok/.nvm/versions/node/v12.0.0/bin",
+    "npm_package_jestSonar_indent": "4",
+    "npm_package_browserslist_production_1": "not dead",
+    "NVM_INC": "/home/ashok/.nvm/versions/node/v12.0.0/include/node",
+    "npm_package_browserslist_production_2": "not op_mini all",
+    "npm_package_scripts_sonar": "node sonar.ts",
+    "npm_package_dependencies__types_react_linkify": "^1.0.1",
+    "npm_package_buildNumber": "20230124",
+    "npm_config_init_license": "MIT",
+    "GNOME_SHELL_SESSION_MODE": "ubuntu",
+    "GTK_MODULES": "gail:atk-bridge",
+    "YARN_WRAP_OUTPUT": "false",
+    "npm_package_scripts_build_production": "env-cmd -f .env.production craco build",
+    "npm_package_dependencies_react_keycloak": "^8.0.1-191210",
+    "npm_package_dependencies_idb": "^7.1.0",
+    "npm_package_dependencies_env_cmd": "^10.1.0",
+    "npm_package_dependencies__charkour_react_reactions": "^0.10.1",
+    "npm_config_version_tag_prefix": "v",
+    "MANAGERPID": "1062",
+    "npm_package_dependencies_redux_thunk": "^2.4.1",
+    "npm_package_dependencies_react_i18next": "^11.15.3",
+    "npm_package_dependencies__react_keycloak_web": "^3.4.0",
+    "DBUS_SESSION_BUS_ADDRESS": "unix:path=/run/user/1000/bus",
+    "npm_package_devDependencies_husky": "^7.0.4",
+    "npm_package_dependencies_logrocket_react": "^5.0.1",
+    "npm_package_dependencies_dotenv": "^15.0.0",
+    "npm_package_dependencies__liveblocks_react": "^0.19.5",
+    "COLORTERM": "truecolor",
+    "npm_package_description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+    "npm_package_nohoist_0": "**/babel-preset-react-app/@babel/runtime",
+    "npm_package_devDependencies_tailwindcss": "^3.0.18",
+    "npm_package_dependencies_react_scripts": "5.0.0",
+    "npm_package_dependencies_react_router_dom": "^6.2.1",
+    "npm_package_dependencies_i18next": "^21.6.10",
+    "npm_package_dependencies__types_nedb": "^1.8.12",
+    "NVM_DIR": "/home/ashok/.nvm",
+    "npm_package_readmeFilename": "README.md",
+    "npm_package_dependencies_pure_react_carousel": "^1.28.1",
+    "npm_package_dependencies_logrocket": "^3.0.1",
+    "npm_package_dependencies_jwt_decode": "^3.1.2",
+    "npm_package_dependencies__types_react": "^17.0.20",
+    "npm_package_dependencies__testing_library_react": "^12.0.0",
+    "npm_package_homepage": "http:///app/",
+    "MANDATORY_PATH": "/usr/share/gconf/ubuntu.mandatory.path",
+    "IM_CONFIG_PHASE": "1",
+    "npm_package_scripts_build_staging": "env-cmd -f .env.staging craco build",
+    "LOGNAME": "ashok",
+    "npm_package_devDependencies__types_react_star_ratings": "^2.3.0",
+    "npm_package_dependencies_keycloak_js": "^18.0.1",
+    "JOURNAL_STREAM": "8:49381",
+    "_": "/usr/bin/yarn",
+    "npm_package_devDependencies_sonarqube_scanner": "^2.8.1",
+    "npm_package_devDependencies_autoprefixer": "^10.4.2",
+    "npm_package_dependencies_query_string": "^7.1.1",
+    "npm_package_private": "true",
+    "XDG_SESSION_CLASS": "user",
+    "DEFAULTS_PATH": "/usr/share/gconf/ubuntu.default.path",
+    "npm_package_devDependencies__types_emoji_mart": "^3.0.9",
+    "npm_package_scripts_prepare": "husky install",
+    "npm_config_registry": "https://registry.yarnpkg.com",
+    "USERNAME": "ashok",
+    "TERM": "xterm-256color",
+    "GNOME_DESKTOP_SESSION_ID": "this-is-deprecated",
+    "npm_package_scripts_start": "craco start",
+    "npm_config_ignore_scripts": "",
+    "WINDOWPATH": "2",
+    "npm_package_browserslist_development_0": "last 1 chrome version",
+    "npm_package_dependencies_axios": "^1.2.1",
+    "PATH": "/tmp/yarn--1675320635784-0.20919720526151164:/home/ashok/workspace/4.0/hoolva-web-4.0/node_modules/.bin:/home/ashok/.config/yarn/link/node_modules/.bin:/home/ashok/.yarn/bin:/home/ashok/.nvm/versions/node/v12.0.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/home/ashok/.nvm/versions/node/v12.0.0/lib/node_modules/npm/bin/node-gyp-bin:/home/ashok/.nvm/versions/node/v12.0.0/bin/node_modules/npm/bin/node-gyp-bin:/home/ashok/.nvm/versions/node/v12.0.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ashok/.dotnet/tools",
+    "NODE": "/home/ashok/.nvm/versions/node/v12.0.0/bin/node",
+    "SESSION_MANAGER": "local/netstratum:@/tmp/.ICE-unix/1408,unix/netstratum:/tmp/.ICE-unix/1408",
+    "INVOCATION_ID": "a2a3795d41fb43a4ac68d5506f924f67",
+    "npm_package_browserslist_development_1": "last 1 firefox version",
+    "npm_package_name": "hoolva-web",
+    "XDG_MENU_PREFIX": "gnome-",
+    "GNOME_TERMINAL_SCREEN": "/org/gnome/Terminal/screen/8e1c7074_e670_4330_83b5_3d6cf71c3e10",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "npm_package_browserslist_development_2": "last 1 safari version",
+    "npm_package_scripts_start_testing": "env-cmd -f .env.testing craco start",
+    "npm_package_dependencies_react_redux": "^7.2.6",
+    "DISPLAY": ":0",
+    "npm_package_devDependencies_jest_sonar_reporter": "^2.0.0",
+    "npm_package_scripts_eject": "react-scripts eject",
+    "LANG": "en_IN",
+    "XDG_CURRENT_DESKTOP": "ubuntu:GNOME",
+    "npm_package_dependencies_react_dom": "^17.0.2",
+    "XMODIFIERS": "@im=ibus",
+    "XDG_SESSION_DESKTOP": "ubuntu",
+    "XAUTHORITY": "/run/user/1000/gdm/Xauthority",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "GNOME_TERMINAL_SERVICE": ":1.103",
+    "npm_lifecycle_script": "craco start",
+    "npm_package_eslintConfig_extends_0": "react-app",
+    "npm_package_dependencies_hdmeet": "./hdmeet-v1.3.3-beta.28.tgz",
+    "npm_package_dependencies__types_node": "^16.7.13",
+    "npm_package_dependencies__types_logrocket_react": "^3.0.0",
+    "SSH_AUTH_SOCK": "/run/user/1000/keyring/ssh",
+    "npm_package_eslintConfig_extends_1": "react-app/jest",
+    "npm_package_scripts_test": "craco test",
+    "npm_package_dependencies_tailwindcss_multi_theme": "^1.0.4",
+    "npm_package_dependencies_react_star_ratings": "^2.3.0",
+    "npm_package_dependencies_react_doc_viewer": "^0.1.5",
+    "npm_config_version_git_message": "v%s",
+    "SHELL": "/bin/bash",
+    "npm_lifecycle_event": "start",
+    "npm_package_jestSonar_reportFile": "test-report.xml",
+    "npm_package_scripts_sonartest": "react-scripts test --silent --env=jsdom --coverage --testResultsProcessor jest-sonar-reporter",
+    "npm_package_dependencies__testing_library_jest_dom": "^5.14.1",
+    "npm_package_version": "4.2.1",
+    "QT_ACCESSIBILITY": "1",
+    "GDMSESSION": "ubuntu",
+    "npm_config_argv": "{\"remain\":[],\"cooked\":[\"run\",\"start\"],\"original\":[\"start\"]}",
+    "npm_package_scripts_build": "craco build",
+    "npm_package_dependencies_copy_to_clipboard": "^3.3.2",
+    "npm_package_dependencies__testing_library_user_event": "^13.2.1",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "npm_config_version_git_tag": "true",
+    "npm_config_version_git_sign": "",
+    "GPG_AGENT_INFO": "/run/user/1000/gnupg/S.gpg-agent:0:1",
+    "GJS_DEBUG_OUTPUT": "stderr",
+    "npm_package_scripts_build_testing": "env-cmd -f .env.testing craco build",
+    "npm_config_strict_ssl": "true",
+    "QT_IM_MODULE": "ibus",
+    "PWD": "/home/ashok/workspace/4.0/hoolva-web-4.0",
+    "npm_execpath": "/usr/lib/node_modules/yarn/bin/yarn.js",
+    "npm_package_dependencies_react_linkify": "git+ssh://git@git.netstratum.com:8022/hoolva/Linkify-lib.git",
+    "XDG_CONFIG_DIRS": "/etc/xdg/xdg-ubuntu:/etc/xdg",
+    "NVM_CD_FLAGS": "",
+    "XDG_DATA_DIRS": "/usr/share/ubuntu:/home/ashok/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop",
+    "npm_package_dependencies__tldraw_tldraw": "^1.27.0",
+    "npm_package_devDependencies_postcss": "^8.4.5",
+    "npm_config_save_prefix": "^",
+    "npm_config_ignore_optional": "",
+    "VTE_VERSION": "6003",
+    "npm_package_dependencies_web_vitals": "^2.1.0",
+    "npm_package_dependencies_typescript": "^4.4.2",
+    "npm_package_dependencies_nedb": "^1.8.0",
+    "INIT_CWD": "/home/ashok/workspace/4.0/hoolva-web-4.0",
+    "npm_package_dependencies_react": "^17.0.2",
+    "npm_package_dependencies__types_react_dom": "^17.0.9",
+    "NODE_ENV": "development",
+    "REACT_APP_SERVER": "wss://us3-cluster.hoolva.com/ws",
+    "REACT_APP_API_KEY": "b92307c2-1a60-4d4b-b1fe-4d3ba57d1ca5",
+    "REACT_APP_API_ROOT": "https://us3-cluster.hoolva.com/v1/",
+    "REACT_APP_BRAND_NAME": "Hoolva",
+    "REACT_APP_SNAME": "hoolva",
+    "REACT_APP_BRAND_URL": "https://us3-test.hoolva.com",
+    "REACT_APP_ENVIRONMENT": "development",
+    "REACT_APP_BUID_NUMBER": "24122021-01",
+    "NODE_PATH": "",
+    "BABEL_ENV": "development",
+    "WEBPACK_SERVE": "true"
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": 0,
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": 67108864,
+      "hard": 67108864
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 1048576,
+      "hard": 1048576
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": "unlimited"
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": 28944,
+      "hard": 28944
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "linux-vdso.so.1",
+    "/lib/x86_64-linux-gnu/libdl.so.2",
+    "/lib/x86_64-linux-gnu/librt.so.1",
+    "/lib/x86_64-linux-gnu/libstdc++.so.6",
+    "/lib/x86_64-linux-gnu/libm.so.6",
+    "/lib/x86_64-linux-gnu/libgcc_s.so.1",
+    "/lib/x86_64-linux-gnu/libpthread.so.0",
+    "/lib/x86_64-linux-gnu/libc.so.6",
+    "/lib64/ld-linux-x86-64.so.2",
+    "/lib/x86_64-linux-gnu/libnss_files.so.2"
+  ]
+}

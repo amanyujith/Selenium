@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+    <file path="/home/sreelal/Desktop/Hoolva/hoolva-web-4.0/src/App.test.tsx">
+        <testCase name="two plus two is four" duration="1"/>
+    </file>
+</testExecutions>

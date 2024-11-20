@@ -1,0 +1,79 @@
+.shadows {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1px 5px 10px 10px;
+    gap: 5px;
+    position: absolute;
+    width: 280px;
+    height: 308px;
+    left: 978px;
+    top: 55px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.closeStart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 28px 15px 28px 10px;
+    gap: 10px;
+    width: 265px;
+    height: 46px;
+    background: #FFFFFF;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.closeButton {
+    position: absolute;
+    left: 20.83%;
+    right: 20.83%;
+    top: 20.84%;
+    bottom: 20.83%;
+    background: #A7A9AB;
+}
+
+.avatar {
+    position: absolute;
+    left: 0%;
+    right: 3.23%;
+    top: 0%;
+    bottom: 0%;
+    background: #C4C4C4;
+}
+
+.userName {
+    width: 71px;
+    height: 23px;
+    /* font-family: 'Roboto'; */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #404041;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    justify-content: center;
+    text-align: center;
+}
+
+.newTest {
+    width: 119.25px;
+    height: 12px;
+    /* font-family: 'Roboto'; */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #A7A9AB;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}

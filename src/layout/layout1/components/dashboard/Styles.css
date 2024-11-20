@@ -1,0 +1,335 @@
+.highlight {
+    color: white;
+    background-color: #F7931F !important;
+}
+
+.rc-time-picker-input {
+    outline: none !important;
+    border: none !important;
+    border-color: transparent !important;
+    height: 38px !important;
+    /* width: 84px; */
+    font-size: 16px !important;
+    /* border: none; */
+    /* width: fit-content !important; */
+    /* width: 166px !important; */
+    text-align: center !important;
+    color: #293241 !important;
+}
+
+
+.rc-time-picker-panel-select {
+    width: 70px !important;
+    font-size: 14px !important;
+}
+
+.rc-time-picker-panel-inner {
+    margin-top: 44px;
+    width: 210px !important;
+}
+
+.rc-time-picker-panel-input-wrap{
+    display: none;
+}
+
+
+
+
+
+
+
+.rc-time-picker {
+    border: none !important;
+
+}
+
+.rc-time-picker-clear {
+    display: none !important;
+}
+
+/* .rc-time-picker-panel-select:last-child {
+    display: none;
+} */
+
+/* .rc-time-picker-panel-select:first-child {
+    width: 84px;
+
+}
+
+.rc-time-picker-panel-select:nth-child(2) {
+    width: 85px;
+
+} */
+/* .meetingWidth{
+    width: calc(100%-615px);
+}
+
+.meetingBoxTitlewidth{
+    width: calc(100%-655px);
+} */
+
+.displayArea {
+    display: none;
+}
+
+.hoverShow:hover .displayArea {
+    display: flex;
+    /* flex-wrap: wrap;
+    width: 200px !important;
+    bottom: 50px !important; */
+}
+
+/* .react-calendar {
+    width: 100% !important;
+  }
+  
+  .react-calendar button {
+    padding: 10px 0px;
+    width: 40px;
+    margin: 0px 10px !important;
+  }
+  
+  .highlight {
+    color: #222;
+    border-radius: 50px;
+    background-color: rgba(247, 147, 31, 0.12) !important;
+  }
+  
+  .customDatePickerWidth,
+  .customDatePickerWidth>div.react-datepicker-wrapper,
+  .customDatePickerWidth>div>div.react-datepicker__input-container .customDatePickerWidth>div>div.react-datepicker__input-container input {
+    width: 100%;
+    font-size: 30px;
+  } */
+
+
+.highlight,
+.react-calendar__tile--active.highlight {
+    color: #222;
+    border-radius: 50px;
+    background-color: rgba(247, 147, 31, 0.12) !important;
+}
+
+
+.react-calendar button {
+    padding: 10px 0px;
+    width: 40px;
+    margin: 0px 10px !important;
+    flex: 0 0 10.2857% !important;
+    height: 55px !important;
+
+}
+
+.react-calendar__month-view__days :hover {
+    border-radius: 50px !important;
+    background-color: transparent !important;
+
+    /* background-color: #e6e6e6 !important; */
+    /* background-color: white !important;
+    border: 2px solid orange; */
+
+}
+
+.react-calendar__month-view__days {
+    display: flex;
+    flex-wrap: wrap;
+    height: 413px;
+    width: 612px;
+}
+
+.calenderclass {
+    height: 550px;
+    width: 611px !important;
+}
+
+.react-calendar__navigation {
+    width: 924px !important;
+}
+
+.react-calendar__navigation__prev2-button {
+    visibility: hidden !important;
+   
+}
+
+.react-calendar__navigation__next2-button {
+    visibility: hidden !important;
+    
+}
+
+.react-calendar__navigation__prev-button {
+    right: 14px !important;
+    position: relative;
+    font-size: 60px !important;
+    color: #A7A9AB;
+
+}
+
+.react-calendar__navigation__next-button {
+    left: 25px !important;
+    position: relative;
+    font-size: 60px !important;
+    color: #A7A9AB;
+
+
+}
+
+.react-calendar__navigation__label {
+    width: 400px !important;
+    position: relative;
+    pointer-events: none;
+    background-color: white;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+    width: 27.57px;
+    /* height: 17.55px; */
+    left: 1018.58px;
+    top: 206.45px;
+
+    /* font-family: 'Roboto'; */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 14px;
+
+    color: #404041;
+
+    height: 35px !important;
+    border-bottom: none;
+    text-decoration: none !important;
+}
+
+abbr:where([title]) {
+    text-decoration: none;
+}
+
+.react-calendar__navigation button {
+    min-width: min-content !important;
+    width:600px !important;
+    white-space: nowrap;
+    place-self: center;
+}
+
+.react-calendar__navigation__label__labelText--from {
+    color: #A7A9AB;
+}
+
+.react-calendar__month-view__days {
+    width: 550px !important;
+}
+
+.react-calendar__navigation {
+    width: 818px !important;
+}
+
+.react-calendar__tile--active {
+    /* background: none !important; */
+    color: #F7931F !important;
+    border: 1px solid #F7931F !important;
+    background-color: inherit !important;
+    border-radius: 50px !important;
+}
+
+.react-calendar__navigation__label__labelText--from {
+    cursor: default !important;
+    background-color: white !important;
+    height: 200px !important;
+    /* display: none !important; */
+    pointer-events: none;
+}
+
+.react-calendar button:enabled:hover {
+    /* border: 1px solid #F7931F !important; */
+    color: #F7931F !important;
+}
+
+/* .react-calendar__tile--active:enabled:hover {
+    background-color: transparent !important;
+} */
+
+
+.react-calendar__tile--now {
+    /* background-color: inherit !important; */
+    background-color: unset !important;
+    color: blue !important;
+}
+
+.react-calendar__tile--now.highlight {
+    background-color: rgba(247, 147, 31, 0.12) !important;
+}
+
+
+.react-calendar__month-view__days__day--weekend {
+    color: #404041 !important;
+}
+
+
+
+.searchBoxanim {
+    /* background-color: red; */
+    animation: expandSearch 0.5s forwards;
+    transition: width 0.5s ease-in;
+}
+
+.searchIcon {
+    animation: fadeIn 1s linear;
+    transition: opacity 1s ease-in;
+
+}
+
+@keyframes expandSearch {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 300px;
+
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+
+input[type=radio] {
+    border: none;
+    width: 15px;
+    height: 15px;
+}
+
+/* 
+        input[type='radio']:after {
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            top: -2px;
+            left: -1px;
+            position: relative;
+            background-color: white;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 1px solid black;
+        } */
+    
+        input[type='radio']:checked:after {
+            width: 13px;
+            height: 13px;
+            border-radius: 15px;
+            top: -3px;
+            left: 1px;
+            position: relative;
+            background-color: #ffa500;
+            content: '';
+            display: inline-block;
+            visibility: visible;
+            border: 2px solid white;
+        }
